@@ -7,14 +7,15 @@
     "lib": "lib"
   },
   "jest": {
-    "verbose": false,
+    "verbose": true,
     "testUrl": "http://localhost",
     "testEnvironment": "node"
   },
   "scripts": {
     "dev": "NODE_PATH=./lib: nodemon --exec babel-node lib/server.js",
     "webpack": "webpack -wd",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "verify-tests": "jest --coverage"
   },
   "babel": {
     "presets": [
